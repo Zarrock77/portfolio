@@ -31,4 +31,4 @@ Thumbs.db
 secrets/
 
 # --- DOCKER ---
-docker-compose.override.yml
+docker-compose.yml
