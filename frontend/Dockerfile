@@ -1,39 +1,11 @@
-# ---------------- Base ----------------
-FROM node:22-slim AS base
+FROM node:20-alpine as build
 WORKDIR /app
-ENV NEXT_TELEMETRY_DISABLED=1
-RUN corepack enable
-
-# ---------------- Dependencies ----------------
-FROM base AS dependencies
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
-
-# ---------------- Build ----------------
-FROM base AS build
-COPY --from=dependencies /app/node_modules ./node_modules
+COPY package*.json ./
+RUN npm install
 COPY . .
-RUN pnpm run build
+RUN npm run build
 
-# ---------------- Runtime ----------------
-FROM node:22-slim AS run
-WORKDIR /app
-
-ENV NODE_ENV=production
-ENV PORT=3000
-EXPOSE 3000
-
-# User non-root
-RUN addgroup --system --gid 1001 nodejs \
- && adduser --system --uid 1001 nextjs \
- && mkdir .next && chown nextjs:nodejs .next
-
-# Copie du standalone (plus léger)
-COPY --from=build /app/.next/standalone ./
-COPY --from=build /app/public ./public
-COPY --from=build /app/.next/static ./.next/static
-
-USER nextjs
-
-ENV HOSTNAME="0.0.0.0"
-CMD ["node", "server.js"]
+FROM nginx:alpine
+COPY --from=build /app/dist/frontend/browser /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
