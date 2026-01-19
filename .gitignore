@@ -1,25 +1,34 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# --- JAVA / SPRING BOOT ---
+backend/target/
+backend/*.class
+backend/*.jar
+backend/*.war
+backend/.mvn/wrapper/maven-wrapper.properties
+backend/**/*.log
 
-# dependencies
-frontend/node_modules
-frontend/.pnp
-frontend/.pnp.*
-frontend/.yarn/*
+# --- ANGULAR / NODE ---
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.editorconfig
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
-# next.js
-frontend/.next/
-frontend/out/
+# --- IDE & OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
 
-# production
-frontend/build
+# --- SÉCURITÉ (CRITIQUE) ---
+.env
+.env.*
+*.pem
+*.key
+secrets/
 
-# debug
-frontend/.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# typescript
-frontend/*.tsbuildinfo
-frontend/next-env.d.ts
-
+# --- DOCKER ---
+docker-compose.override.yml
