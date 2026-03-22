@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(pnpm import:*)",
+      "Bash(pnpm install:*)",
+      "Bash(__NEW_LINE_92633c59ca4539c8__ echo:*)",
+      "Bash(ls /c/Users/jj/Documents/Portfolio/node_modules/next/dist/docs/01-app/01-getting-started/*.md)",
+      "Bash(find /c/Users/jj/Documents/Portfolio/node_modules/next/dist/docs/03-architecture /c/Users/jj/Documents/Portfolio/node_modules/next/dist/docs/04-community -name *.md)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm dlx:*)"
+    ]
+  }
+}

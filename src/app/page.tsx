@@ -1,65 +1,192 @@
-import Image from "next/image";
+import Link from "next/link";
+import Section from "@/components/section";
+import SkillBadge from "@/components/skill-badge";
+import ProjectCard from "@/components/project-card";
+import { skillCategories } from "@/data/skills";
+import { projects } from "@/data/projects";
 
 export default function Home() {
+  const featured = projects.slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <>
+      {/* Hero */}
+      <section className="flex min-h-[80dvh] flex-col items-center justify-center px-6 text-center">
+        <p className="font-mono text-sm tracking-widest text-accent-light uppercase">
+          Fullstack Developer
+        </p>
+        <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight sm:text-7xl">
+          Jean-Jacques
+          <br />
+          Delegue
+        </h1>
+        <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
+          4th year Epitech student building modern web experiences. Currently
+          based in Brussels.
+        </p>
+
+        {/* Contact links inline */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/Zarrock77"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition-colors hover:border-accent hover:text-foreground"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            GitHub
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://linkedin.com/in/"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition-colors hover:border-accent hover:text-foreground"
           >
-            Documentation
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="mailto:jean-jacques@example.com"
+            className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm text-muted transition-colors hover:border-accent hover:text-foreground"
+          >
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            Email
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* About */}
+      <Section title="About Me" id="about">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="space-y-4 text-muted leading-relaxed">
+            <p>
+              I&apos;m a fullstack developer and 4th year student at Epitech
+              Paris, currently completing my international year at Epitech
+              Brussels.
+            </p>
+            <p>
+              From low-level C projects to modern web apps with React and
+              Next.js, I enjoy exploring the full spectrum of development and
+              building clean, efficient applications.
+            </p>
+          </div>
+          <div className="space-y-6">
+            {skillCategories.map((category) => (
+              <div key={category.name}>
+                <h3 className="mb-2 text-sm font-medium tracking-wide text-foreground uppercase">
+                  {category.name}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <SkillBadge key={skill} name={skill} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Featured Projects */}
+      <Section title="Featured Projects" id="projects">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/projects"
+            className="inline-block rounded-full border border-border px-6 py-3 text-sm font-medium text-muted transition-colors hover:border-accent hover:text-foreground"
+          >
+            View All Projects &rarr;
+          </Link>
+        </div>
+      </Section>
+
+      {/* Contact */}
+      <Section title="Get in Touch" id="contact">
+        <p className="mb-8 max-w-xl text-muted leading-relaxed">
+          Interested in working together or just want to say hello? Feel free to
+          reach out.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="https://github.com/Zarrock77"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 rounded-xl border border-border bg-surface px-5 py-4 transition-colors hover:border-accent/50"
+          >
+            <svg
+              className="h-5 w-5 text-muted transition-colors group-hover:text-foreground"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <div>
+              <p className="text-sm font-medium text-foreground">GitHub</p>
+              <p className="text-xs text-muted">@Zarrock77</p>
+            </div>
+          </a>
+          <a
+            href="https://linkedin.com/in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 rounded-xl border border-border bg-surface px-5 py-4 transition-colors hover:border-accent/50"
+          >
+            <svg
+              className="h-5 w-5 text-muted transition-colors group-hover:text-foreground"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            <div>
+              <p className="text-sm font-medium text-foreground">LinkedIn</p>
+              <p className="text-xs text-muted">Connect with me</p>
+            </div>
+          </a>
+          <a
+            href="mailto:jean-jacques@example.com"
+            className="group flex items-center gap-3 rounded-xl border border-border bg-surface px-5 py-4 transition-colors hover:border-accent/50"
+          >
+            <svg
+              className="h-5 w-5 text-muted transition-colors group-hover:text-foreground"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            <div>
+              <p className="text-sm font-medium text-foreground">Email</p>
+              <p className="text-xs text-muted">jean-jacques@example.com</p>
+            </div>
+          </a>
+        </div>
+      </Section>
+    </>
   );
 }
