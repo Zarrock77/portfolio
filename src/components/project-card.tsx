@@ -4,7 +4,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group flex flex-col gap-4 rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/50">
       <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
-      <p className="flex-1 text-sm leading-relaxed text-muted">
+      <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
         {project.description}
       </p>
       <div className="flex flex-wrap gap-2">
@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted-foreground transition-colors hover:text-foreground"
             >
               GitHub &rarr;
             </a>
@@ -34,7 +34,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted-foreground transition-colors hover:text-foreground"
             >
               Live &rarr;
             </a>

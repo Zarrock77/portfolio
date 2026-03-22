@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <Section title="Projects">
-      <p className="mb-10 max-w-2xl text-muted leading-relaxed">
+      <p className="mb-10 max-w-2xl text-muted-foreground leading-relaxed">
         A selection of projects I&apos;ve worked on. More to come as I continue
         to build and learn.
       </p>
