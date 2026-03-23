@@ -5,50 +5,50 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fafafa;
-  --foreground: #27272a;
-  --card: #f0f0f2;
-  --card-foreground: #27272a;
-  --popover: #fafafa;
-  --popover-foreground: #27272a;
-  --primary: #7c3aed;
-  --primary-foreground: #fafafa;
-  --secondary: #ececef;
-  --secondary-foreground: #3f3f46;
-  --muted: #ececef;
-  --muted-foreground: #71717a;
-  --accent: #7c3aed;
-  --accent-foreground: #fafafa;
-  --accent-light: #8b5cf6;
-  --surface: #f0f0f2;
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #1c1917;
+  --primary-foreground: #fafaf9;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #1c1917;
+  --muted: #f5f5f4;
+  --muted-foreground: #78716c;
+  --accent: #1c1917;
+  --accent-foreground: #fafaf9;
+  --accent-light: #44403c;
+  --surface: #f5f5f4;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #d4d4d8;
-  --input: #d4d4d8;
-  --ring: #7c3aed;
-  --radius: 0.625rem;
+  --border: #d6d3d1;
+  --input: #d6d3d1;
+  --ring: #1c1917;
+  --radius: 0.375rem;
 }
 
 .dark {
-  --background: #141416;
-  --foreground: #d4d4d8;
-  --card: #1c1c20;
-  --card-foreground: #d4d4d8;
-  --popover: #1c1c20;
-  --popover-foreground: #d4d4d8;
-  --primary: #8b5cf6;
-  --primary-foreground: #fafafa;
-  --secondary: #27272a;
-  --secondary-foreground: #d4d4d8;
-  --muted: #27272a;
-  --muted-foreground: #8a8a8f;
-  --accent: #8b5cf6;
-  --accent-foreground: #fafafa;
-  --accent-light: #a78bfa;
-  --surface: #1c1c20;
+  --background: #0c0a09;
+  --foreground: #e7e5e4;
+  --card: #1c1917;
+  --card-foreground: #e7e5e4;
+  --popover: #1c1917;
+  --popover-foreground: #e7e5e4;
+  --primary: #e7e5e4;
+  --primary-foreground: #0c0a09;
+  --secondary: #1c1917;
+  --secondary-foreground: #e7e5e4;
+  --muted: #1c1917;
+  --muted-foreground: #a8a29e;
+  --accent: #e7e5e4;
+  --accent-foreground: #0c0a09;
+  --accent-light: #d6d3d1;
+  --surface: #1c1917;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: #2e2e33;
-  --input: #2e2e33;
-  --ring: #8b5cf6;
+  --border: #292524;
+  --input: #292524;
+  --ring: #e7e5e4;
 }
 
 @theme inline {
@@ -85,16 +85,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Hero animations */
-@keyframes hero-fade-up {
+/* Page load animation */
+@keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -102,41 +105,45 @@
   }
 }
 
-@keyframes hero-glow-pulse {
-  0%, 100% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1.15);
-  }
+.animate-in-view {
+  animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes hero-grid-fade {
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* Scroll-triggered reveal */
+.scroll-reveal-hidden {
+  opacity: 0;
+}
+
+.scroll-revealed {
+  animation: reveal-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-up {
   from {
     opacity: 0;
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes hero-line-draw {
-  from {
-    stroke-dashoffset: 200;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-revealed,
+  .animate-in-view {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
-  to {
-    stroke-dashoffset: 0;
+  .scroll-reveal-hidden {
+    opacity: 1;
   }
 }
-
-.hero-fade-up {
-  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.hero-delay-1 { animation-delay: 0.1s; }
-.hero-delay-2 { animation-delay: 0.25s; }
-.hero-delay-3 { animation-delay: 0.4s; }
-.hero-delay-4 { animation-delay: 0.55s; }
-.hero-delay-5 { animation-delay: 0.7s; }
