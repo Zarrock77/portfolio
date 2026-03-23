@@ -31,7 +31,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="mt-10 grid gap-6 sm:grid-cols-2">
       <div className="flex flex-col gap-2">
-        <label htmlFor="name" className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">
+        <label htmlFor="name" className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">
           {t('name')}
         </label>
         <input
@@ -40,11 +40,11 @@ export default function ContactForm() {
           name="name"
           required
           placeholder={t('namePlaceholder')}
-          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 transition-[border-color] duration-200 focus:border-foreground/40 focus:outline-none"
+          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">
+        <label htmlFor="email" className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">
           {t('email')}
         </label>
         <input
@@ -53,11 +53,11 @@ export default function ContactForm() {
           name="email"
           required
           placeholder={t('emailPlaceholder')}
-          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 transition-[border-color] duration-200 focus:border-foreground/40 focus:outline-none"
+          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex flex-col gap-2 sm:col-span-2">
-        <label htmlFor="message" className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">
+        <label htmlFor="message" className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">
           {t('message')}
         </label>
         <textarea
@@ -66,7 +66,7 @@ export default function ContactForm() {
           required
           rows={5}
           placeholder={t('messagePlaceholder')}
-          className="resize-none border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 transition-[border-color] duration-200 focus:border-foreground/40 focus:outline-none"
+          className="resize-none border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex items-center gap-4 sm:col-span-2">
