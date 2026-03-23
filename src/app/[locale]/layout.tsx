@@ -13,6 +13,10 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import '../globals.css';
 
+// Vercel
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -95,6 +99,8 @@ export default async function RootLayout({
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
+				<SpeedInsights />
       </body>
     </html>
   );

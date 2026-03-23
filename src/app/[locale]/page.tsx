@@ -139,13 +139,13 @@ export default async function Home() {
                 <div className="mt-8 flex items-center justify-between">
                   <div className="flex flex-wrap gap-x-3 gap-y-1">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="font-mono text-[11px] text-muted-foreground/50">
+                      <span key={tag} className="font-mono text-[11px] text-muted-foreground/80">
                         {tag}
                       </span>
                     ))}
                   </div>
                   {project.github && (
-                    <span className="text-xs text-muted-foreground/40 transition-colors group-hover:text-muted-foreground">
+                    <span className="text-xs text-muted-foreground/80 transition-colors group-hover:text-muted-foreground">
                       {t('projects.viewOnGithub')} &rarr;
                     </span>
                   )}
@@ -170,13 +170,13 @@ export default async function Home() {
           </ScrollReveal>
           <ScrollReveal delay={160}>
             <div className="border-t border-border pt-6 lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0">
-              <p className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">
+              <p className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">
                 {t('about.education')}
               </p>
               <h3 className="mt-3 text-base font-semibold tracking-tight text-foreground">{t('about.school')}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{t('about.degree')}</p>
-              <p className="mt-0.5 text-sm text-muted-foreground/60">{t('about.field')}</p>
-              <p className="mt-3 font-mono text-xs text-muted-foreground/50">{t('about.period')}</p>
+              <p className="mt-0.5 text-sm text-muted-foreground/80">{t('about.field')}</p>
+              <p className="mt-3 font-mono text-xs text-muted-foreground/80">{t('about.period')}</p>
             </div>
           </ScrollReveal>
         </div>
@@ -224,7 +224,7 @@ export default async function Home() {
               <div className="grid gap-4 py-8 sm:grid-cols-[1fr_2fr] sm:gap-8">
                 <div>
                   {entry.dates.map((date) => (
-                    <p key={date} className="font-mono text-xs text-muted-foreground/50">
+                    <p key={date} className="font-mono text-xs text-muted-foreground/80">
                       {date}
                     </p>
                   ))}
