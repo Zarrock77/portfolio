@@ -1,0 +1,7 @@
+{
+  "order": 5,
+  "name": "Tools & Workflow",
+  "skills": ["Git", "VS Code", "Postman", "Figma", "Agile/Scrum"],
+  "en": { "description": "Daily tools for efficient development." },
+  "fr": { "description": "Outils du quotidien pour un développement efficace." }
+}

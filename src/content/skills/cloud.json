@@ -1,0 +1,7 @@
+{
+  "order": 4,
+  "name": "Cloud & DevOps",
+  "skills": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD"],
+  "en": { "description": "Automation, containerization and deployment." },
+  "fr": { "description": "Automatisation, conteneurisation et déploiement." }
+}

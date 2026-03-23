@@ -1,0 +1,12 @@
+{
+  "order": 2,
+  "title": "Whanos",
+  "tags": ["DevOps", "Docker", "Kubernetes", "Jenkins", "Python", "Groovy"],
+  "github": "https://github.com/Zarrock77/whanos",
+  "en": {
+    "description": "A DevOps infrastructure that automatically detects, containerizes, and deploys applications to Kubernetes on every Git push."
+  },
+  "fr": {
+    "description": "Une infrastructure DevOps qui détecte, conteneurise et déploie automatiquement des applications sur Kubernetes à chaque push Git."
+  }
+}

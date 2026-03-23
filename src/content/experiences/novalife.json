@@ -1,0 +1,24 @@
+{
+  "order": 2,
+  "company": "Nova Life",
+  "en": {
+    "dates": ["Mar 2025 — Jul 2025"],
+    "location": "Paris",
+    "role": "Full-Stack Developer Intern",
+    "tasks": [
+      "Built a digital platform from scratch connecting craftsmen and clients.",
+      "Developed complex forms, main user interfaces, and key functionalities.",
+      "Managed the full project lifecycle, ensuring responsive design and user-focused features."
+    ]
+  },
+  "fr": {
+    "dates": ["Mar 2025 — Juil 2025"],
+    "location": "Paris",
+    "role": "Développeur Full-Stack Stagiaire",
+    "tasks": [
+      "Création d'une plateforme digitale connectant artisans et clients.",
+      "Développement de formulaires complexes, interfaces utilisateur principales et fonctionnalités clés.",
+      "Gestion du cycle de vie complet du projet, assurant un design responsive et des fonctionnalités centrées utilisateur."
+    ]
+  }
+}

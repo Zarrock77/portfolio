@@ -1,0 +1,7 @@
+{
+  "order": 3,
+  "name": "Systems Programming",
+  "skills": ["C", "C++", "Linux", "Shell", "Makefile", "CMake"],
+  "en": { "description": "Low-level programming and system mastery." },
+  "fr": { "description": "Programmation bas niveau et maîtrise système." }
+}

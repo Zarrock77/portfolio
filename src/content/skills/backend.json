@@ -1,0 +1,7 @@
+{
+  "order": 2,
+  "name": "Backend",
+  "skills": ["Node.js", "Express", "Python", "REST APIs"],
+  "en": { "description": "Robust APIs and server logic." },
+  "fr": { "description": "APIs robustes et logique serveur." }
+}

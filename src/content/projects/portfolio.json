@@ -1,0 +1,12 @@
+{
+  "order": 1,
+  "title": "Portfolio",
+  "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+  "github": "https://github.com/Zarrock77/Portfolio",
+  "en": {
+    "description": "My personal portfolio website built with Next.js 16, React 19, and Tailwind CSS v4."
+  },
+  "fr": {
+    "description": "Mon portfolio personnel construit avec Next.js 16, React 19 et Tailwind CSS v4."
+  }
+}

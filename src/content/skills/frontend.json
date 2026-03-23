@@ -1,0 +1,7 @@
+{
+  "order": 1,
+  "name": "Frontend Engineering",
+  "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+  "en": { "description": "Modern, performant and responsive interfaces." },
+  "fr": { "description": "Interfaces modernes, performantes et responsives." }
+}

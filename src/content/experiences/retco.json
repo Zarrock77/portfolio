@@ -1,0 +1,24 @@
+{
+  "order": 3,
+  "company": "Retco",
+  "en": {
+    "dates": ["Sep 2023 — Dec 2023", "Sep 2024 — Mar 2025"],
+    "location": "Paris",
+    "role": "Full-Stack Developer Intern",
+    "tasks": [
+      "Developed a web application for real estate professionals to upload deal documents (PDFs).",
+      "Implemented automated data extraction to populate tracking dashboards and reports.",
+      "Returned to optimize performance, improve architecture, and integrate new core features."
+    ]
+  },
+  "fr": {
+    "dates": ["Sep 2023 — Déc 2023", "Sep 2024 — Mar 2025"],
+    "location": "Paris",
+    "role": "Développeur Full-Stack Stagiaire",
+    "tasks": [
+      "Développement d'une application web permettant aux professionnels de l'immobilier de télécharger des documents de transactions (PDFs).",
+      "Implémentation de l'extraction automatique de données pour alimenter des tableaux de bord et rapports de suivi.",
+      "Retour pour optimiser les performances, améliorer l'architecture et intégrer de nouvelles fonctionnalités."
+    ]
+  }
+}

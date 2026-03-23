@@ -1,0 +1,22 @@
+{
+  "order": 1,
+  "company": "QATA Speed (QTS)",
+  "en": {
+    "dates": ["Oct 2025 — Dec 2025"],
+    "location": "Paris",
+    "role": "Full-Stack Developer Intern",
+    "tasks": [
+      "Built the company showcase website for a long-distance freight transport company.",
+      "Developed a booking application allowing clients to request transport from point A to point B."
+    ]
+  },
+  "fr": {
+    "dates": ["Oct 2025 — Déc 2025"],
+    "location": "Paris",
+    "role": "Développeur Full-Stack Stagiaire",
+    "tasks": [
+      "Création du site vitrine pour une société de transport routier de fret longue distance.",
+      "Développement d'une application de réservation permettant aux clients de demander un transport d'un point A à un point B."
+    ]
+  }
+}
