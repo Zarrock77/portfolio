@@ -12,8 +12,25 @@ export default async function Home() {
   const skills = getAllSkills(locale);
   const experiences = getAllExperiences(locale);
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Jean-Jacques Delegue',
+    url: `${baseUrl}/${locale}`,
+    jobTitle: t('hero.role'),
+    description: t('metadata.description'),
+    sameAs: ['https://github.com/Zarrock77', 'https://www.linkedin.com/in/jean-jacques-delegue/'],
+    email: 'jean-jacques.delegue@epitech.eu',
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Epitech',
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero */}
       <section className="flex min-h-[85dvh] items-center">
         <div className="mx-auto w-full max-w-5xl px-6">

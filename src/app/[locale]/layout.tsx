@@ -31,9 +31,37 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  const title = t('title');
+  const description = t('description');
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
   return {
-    title: t('title'),
-    description: t('description'),
+    title,
+    description,
+    authors: [{ name: 'Jean-Jacques Delegue' }],
+    creator: 'Jean-Jacques Delegue',
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        fr: '/fr',
+        en: '/en',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}`,
+      siteName: 'Jean-Jacques Delegue',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
   };
 }
 
