@@ -9,7 +9,9 @@
       "Bash(find /c/Users/jj/Documents/Portfolio/node_modules/next/dist/docs/03-architecture /c/Users/jj/Documents/Portfolio/node_modules/next/dist/docs/04-community -name *.md)",
       "Bash(pnpm build:*)",
       "Bash(pnpm lint:*)",
-      "Bash(pnpm dlx:*)"
+      "Bash(pnpm dlx:*)",
+      "Bash(pnpm add:*)",
+      "Bash(find C:UsersjjDocumentsPortfolionode_modulesnextdistdocs -type f -name *mdx*)"
     ]
   }
 }
