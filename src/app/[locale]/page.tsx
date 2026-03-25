@@ -1,13 +1,15 @@
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAllProjects } from '@/lib/projects';
 import { getAllSkills } from '@/lib/skills';
 import { getAllExperiences } from '@/lib/experiences';
 import ContactForm from '@/components/contact-form';
 import ScrollReveal from '@/components/scroll-reveal';
 
-export default async function Home() {
-  const locale = (await getLocale()) as 'en' | 'fr';
-  const t = await getTranslations();
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as 'en' | 'fr';
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const projects = getAllProjects(locale);
   const skills = getAllSkills(locale);
   const experiences = getAllExperiences(locale);
@@ -34,10 +36,10 @@ export default async function Home() {
       {/* Hero */}
       <section className="flex min-h-[85dvh] items-center">
         <div className="mx-auto w-full max-w-5xl px-6">
-          <p className="animate-in-view delay-1 font-mono text-sm tracking-widest text-muted-foreground uppercase">
+          <p className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
             {t('hero.role')}
           </p>
-          <h1 className="animate-in-view delay-2 mt-6 text-5xl font-bold leading-[1.08] tracking-tight sm:text-7xl lg:text-8xl">
+          <h1 className="mt-6 text-5xl font-bold leading-[1.08] tracking-tight sm:text-7xl lg:text-8xl">
             Jean-Jacques
             <br />
             Delegue
