@@ -9,12 +9,22 @@ export default function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Close menu on resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setMenuOpen(false);
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   const links = [
@@ -36,7 +46,8 @@ export default function Navbar() {
           JJD
         </a>
 
-        <div className="flex items-center gap-8">
+        {/* Desktop nav */}
+        <div className="hidden items-center gap-8 md:flex">
           <ul className="flex gap-8">
             {links.map(({ href, label }) => (
               <li key={href}>
@@ -49,7 +60,48 @@ export default function Navbar() {
           <LanguageSwitcher locale={locale} />
           <ThemeToggle />
         </div>
+
+        {/* Mobile right side */}
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher locale={locale} />
+          <ThemeToggle />
+          <button
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <span
+              className={`block h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? 'translate-y-[3.5px] rotate-45' : ''}`}
+            />
+            <span
+              className={`block h-px w-5 bg-current transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? '-translate-y-[3.5px] -rotate-45' : ''}`}
+            />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="border-t border-border bg-background/95 backdrop-blur-sm md:hidden">
+          <ul className="mx-auto flex max-w-5xl flex-col px-6 py-4">
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
