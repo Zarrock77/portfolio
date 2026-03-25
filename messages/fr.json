@@ -55,6 +55,48 @@
   "footer": {
     "rights": "Tous droits réservés.",
     "navigation": "Navigation",
-    "contact": "Contact"
+    "contact": "Contact",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "legalNotice": "Mentions légales"
+  },
+  "legal": {
+    "metaTitle": "Mentions légales | Jean-Jacques Delegue",
+    "metaDescription": "Mentions légales du site portfolio de Jean-Jacques Delegue, conformément à la loi pour la confiance dans l'économie numérique (LCEN).",
+    "title": "Mentions légales",
+    "backHome": "← Retour à l'accueil",
+    "editorTitle": "Éditeur du site",
+    "editorContent": "Ce site est édité par Jean-Jacques Delegue, étudiant à titre personnel (non commercial).\nEmail : jean-jacques.delegue@epitech.eu",
+    "hostingTitle": "Hébergement",
+    "hostingContent": "Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Site web : vercel.com",
+    "ipTitle": "Propriété intellectuelle",
+    "ipContent": "L'ensemble du contenu de ce site (textes, code source, visuels) est la propriété exclusive de Jean-Jacques Delegue, sauf mention contraire. Toute reproduction ou représentation sans autorisation écrite préalable est interdite.",
+    "responsibilityTitle": "Limitation de responsabilité",
+    "responsibilityContent": "Jean-Jacques Delegue ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation de ce site ou de l'inaccessibilité de celui-ci.",
+    "contactTitle": "Contact",
+    "contactContent": "Pour toute question relative à ce site, vous pouvez contacter jean-jacques.delegue@epitech.eu."
+  },
+  "privacy": {
+    "metaTitle": "Politique de confidentialité | Jean-Jacques Delegue",
+    "metaDescription": "Politique de confidentialité du site portfolio de Jean-Jacques Delegue — collecte et traitement des données personnelles conformément au RGPD.",
+    "title": "Politique de confidentialité",
+    "backHome": "← Retour à l'accueil",
+    "lastUpdated": "Dernière mise à jour : mars 2026",
+    "introTitle": "Introduction",
+    "introContent": "Ce site est un portfolio personnel à caractère non commercial. La présente politique décrit les données personnelles susceptibles d'être collectées lors de votre visite et la façon dont elles sont traitées, conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "collectionTitle": "Données collectées",
+    "collectionContent": "Les seules données personnelles collectées sont celles que vous fournissez volontairement via le formulaire de contact : nom, adresse email et contenu du message. Ces données ne sont collectées qu'avec votre consentement explicite lors de l'envoi du formulaire.",
+    "purposeTitle": "Finalité du traitement",
+    "purposeContent": "Les données du formulaire de contact sont utilisées exclusivement pour répondre à votre message. Elles ne sont ni vendues, ni partagées avec des tiers à des fins commerciales.",
+    "thirdPartyTitle": "Sous-traitant — Web3Forms",
+    "thirdPartyContent": "Le formulaire de contact utilise le service Web3Forms (web3forms.com) pour l'acheminement des messages. Les données saisies dans le formulaire sont transmises à ce service. Web3Forms est soumis à sa propre politique de confidentialité, disponible sur leur site.",
+    "analyticsTitle": "Mesure d'audience — Vercel Analytics",
+    "analyticsContent": "Ce site utilise Vercel Analytics pour mesurer l'audience de façon agrégée et anonymisée. Aucun cookie de traçage n'est déposé sur votre appareil. Les données collectées ne permettent pas de vous identifier personnellement.",
+    "retentionTitle": "Durée de conservation",
+    "retentionContent": "Les données du formulaire de contact sont conservées le temps nécessaire pour traiter votre demande, puis supprimées. Web3Forms applique ses propres règles de conservation.",
+    "rightsTitle": "Vos droits",
+    "rightsContent": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données, ainsi que du droit de vous opposer à leur traitement. Pour exercer ces droits, contactez : jean-jacques.delegue@epitech.eu.",
+    "contactTitle": "Contact",
+    "contactContent": "Pour toute question relative au traitement de vos données personnelles : jean-jacques.delegue@epitech.eu"
   }
 }
