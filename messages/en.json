@@ -55,6 +55,48 @@
   "footer": {
     "rights": "All rights reserved.",
     "navigation": "Navigation",
-    "contact": "Contact"
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice"
+  },
+  "legal": {
+    "metaTitle": "Legal Notice | Jean-Jacques Delegue",
+    "metaDescription": "Legal notice for Jean-Jacques Delegue's portfolio website.",
+    "title": "Legal Notice",
+    "backHome": "← Back to home",
+    "editorTitle": "Website Publisher",
+    "editorContent": "This website is published by Jean-Jacques Delegue, a private individual (non-commercial).\nEmail: jean-jacques.delegue@epitech.eu",
+    "hostingTitle": "Hosting",
+    "hostingContent": "This website is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States. Website: vercel.com",
+    "ipTitle": "Intellectual Property",
+    "ipContent": "All content on this website (texts, source code, visuals) is the exclusive property of Jean-Jacques Delegue, unless otherwise stated. Any reproduction or representation without prior written permission is prohibited.",
+    "responsibilityTitle": "Limitation of Liability",
+    "responsibilityContent": "Jean-Jacques Delegue cannot be held liable for any direct or indirect damages resulting from the use of this website or its unavailability.",
+    "contactTitle": "Contact",
+    "contactContent": "For any questions regarding this website, please contact jean-jacques.delegue@epitech.eu."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | Jean-Jacques Delegue",
+    "metaDescription": "Privacy policy for Jean-Jacques Delegue's portfolio — personal data collection and processing in accordance with GDPR.",
+    "title": "Privacy Policy",
+    "backHome": "← Back to home",
+    "lastUpdated": "Last updated: March 2026",
+    "introTitle": "Introduction",
+    "introContent": "This website is a personal, non-commercial portfolio. This policy describes the personal data that may be collected during your visit and how it is processed, in accordance with the General Data Protection Regulation (GDPR).",
+    "collectionTitle": "Data Collected",
+    "collectionContent": "The only personal data collected is what you voluntarily provide through the contact form: name, email address, and message content. This data is only collected with your explicit consent when submitting the form.",
+    "purposeTitle": "Purpose of Processing",
+    "purposeContent": "Contact form data is used solely to reply to your message. It is neither sold nor shared with third parties for commercial purposes.",
+    "thirdPartyTitle": "Sub-processor — Web3Forms",
+    "thirdPartyContent": "The contact form uses the Web3Forms service (web3forms.com) to route messages. Data entered in the form is transmitted to this service. Web3Forms is subject to its own privacy policy, available on their website.",
+    "analyticsTitle": "Analytics — Vercel Analytics",
+    "analyticsContent": "This website uses Vercel Analytics to measure traffic in an aggregated and anonymized manner. No tracking cookies are placed on your device. The data collected does not allow personal identification.",
+    "retentionTitle": "Data Retention",
+    "retentionContent": "Contact form data is retained only for as long as necessary to process your request, then deleted. Web3Forms applies its own retention rules.",
+    "rightsTitle": "Your Rights",
+    "rightsContent": "Under GDPR, you have the right to access, rectify, erase, and port your data, as well as the right to object to its processing. To exercise these rights, contact: jean-jacques.delegue@epitech.eu.",
+    "contactTitle": "Contact",
+    "contactContent": "For any questions regarding the processing of your personal data: jean-jacques.delegue@epitech.eu"
   }
 }
