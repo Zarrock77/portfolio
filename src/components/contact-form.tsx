@@ -40,7 +40,7 @@ export default function ContactForm() {
           name="name"
           required
           placeholder={t('namePlaceholder')}
-          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
+          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex flex-col gap-2">
@@ -53,7 +53,7 @@ export default function ContactForm() {
           name="email"
           required
           placeholder={t('emailPlaceholder')}
-          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
+          className="border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex flex-col gap-2 sm:col-span-2">
@@ -66,7 +66,7 @@ export default function ContactForm() {
           required
           rows={5}
           placeholder={t('messagePlaceholder')}
-          className="resize-none border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
+          className="resize-none border border-border bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 transition-[border-color] duration-200 focus:border-foreground/60 focus:outline-none"
         />
       </div>
       <div className="flex items-center gap-4 sm:col-span-2">

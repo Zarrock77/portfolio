@@ -16,10 +16,10 @@
   --secondary: #f5f5f4;
   --secondary-foreground: #1c1917;
   --muted: #f5f5f4;
-  --muted-foreground: #44403c;
+  --muted-foreground: #292524;
   --accent: #1c1917;
   --accent-foreground: #fafaf9;
-  --accent-light: #44403c;
+  --accent-light: #292524;
   --surface: #f5f5f4;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #d6d3d1;

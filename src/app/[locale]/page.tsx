@@ -130,7 +130,7 @@ export default async function Home() {
                 className="group flex h-full flex-col justify-between border border-border p-8 transition-all duration-300 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-sm"
               >
                 <div>
-                  <span className="font-mono text-xs text-muted-foreground/40">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-mono text-xs text-muted-foreground/70">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="mt-4 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                     {project.title}
                   </h3>
@@ -175,8 +175,8 @@ export default async function Home() {
               </p>
               <h3 className="mt-3 text-base font-semibold tracking-tight text-foreground">{t('about.school')}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{t('about.degree')}</p>
-              <p className="mt-0.5 text-sm text-muted-foreground/80">{t('about.field')}</p>
-              <p className="mt-3 font-mono text-xs text-muted-foreground/80">{t('about.period')}</p>
+              <p className="mt-0.5 text-sm text-muted-foreground">{t('about.field')}</p>
+              <p className="mt-3 font-mono text-xs text-muted-foreground">{t('about.period')}</p>
             </div>
           </ScrollReveal>
         </div>
@@ -193,7 +193,7 @@ export default async function Home() {
               <div className="grid gap-4 py-8 sm:grid-cols-[1fr_2fr] sm:gap-8">
                 <div>
                   <h3 className="text-base font-semibold tracking-tight text-foreground">{category.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground/60">{category.description}</p>
+                  <p className="mt-1 text-sm text-muted-foreground/80">{category.description}</p>
                 </div>
                 <div className="flex flex-wrap items-start gap-2">
                   {category.skills.map((skill) => (
@@ -224,16 +224,16 @@ export default async function Home() {
               <div className="grid gap-4 py-8 sm:grid-cols-[1fr_2fr] sm:gap-8">
                 <div>
                   {entry.dates.map((date) => (
-                    <p key={date} className="font-mono text-xs text-muted-foreground/80">
+                    <p key={date} className="font-mono text-xs text-muted-foreground">
                       {date}
                     </p>
                   ))}
-                  <p className="mt-1 text-sm text-muted-foreground/60">{entry.location}</p>
+                  <p className="mt-1 text-sm text-muted-foreground/80">{entry.location}</p>
                 </div>
                 <div>
                   <h3 className="text-base font-semibold tracking-tight text-foreground">{entry.role}</h3>
                   <p className="mt-0.5 text-sm text-muted-foreground">{entry.company}</p>
-                  <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground/80 leading-relaxed">
+                  <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                     {entry.tasks.map((task) => (
                       <li key={task}>{task}</li>
                     ))}

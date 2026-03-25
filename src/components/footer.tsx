@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">{t('navigation')}</p>
+          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">{t('navigation')}</p>
           <ul className="mt-3 space-y-2 text-muted-foreground">
             <li>
               <a href="#projects" className="transition-colors hover:text-foreground">
@@ -44,7 +44,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">{t('contact')}</p>
+          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">{t('contact')}</p>
           <ul className="mt-3 space-y-2 text-muted-foreground">
             <li>
               <a
@@ -74,7 +74,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">{t('legal')}</p>
+          <p className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">{t('legal')}</p>
           <ul className="mt-3 space-y-2 text-muted-foreground">
             <li>
               <Link href="/privacy" className="transition-colors hover:text-foreground">

@@ -48,7 +48,7 @@ export default async function LegalPage({ params }: { params: Promise<{ locale: 
       <div className="mt-12 space-y-10">
         {sections.map((section) => (
           <section key={section.title}>
-            <h2 className="font-mono text-[11px] tracking-wider text-muted-foreground/50 uppercase">{section.title}</h2>
+            <h2 className="font-mono text-[11px] tracking-wider text-muted-foreground/80 uppercase">{section.title}</h2>
             <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{section.content}</p>
           </section>
         ))}
