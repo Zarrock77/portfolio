@@ -45,7 +45,7 @@ export default async function Home() {
           <div className="animate-in-view delay-3 mt-8 max-w-lg">
             <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">{t('hero.description')}</p>
           </div>
-          <div className="animate-in-view delay-4 mt-10 flex items-center gap-4">
+          <div className="animate-in-view delay-4 mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
               className="border border-foreground bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-transparent hover:text-foreground"
@@ -61,7 +61,7 @@ export default async function Home() {
             </a>
           </div>
           <div className="animate-in-view delay-5 mt-10 h-px w-12 bg-muted-foreground/30" />
-          <div className="animate-in-view mt-8 flex items-center gap-8" style={{ animationDelay: '0.6s' }}>
+          <div className="animate-in-view mt-8 flex flex-wrap items-center gap-6" style={{ animationDelay: '0.6s' }}>
             <a
               href="https://github.com/Zarrock77"
               target="_blank"
