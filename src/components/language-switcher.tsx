@@ -5,19 +5,29 @@ import { usePathname, useRouter } from '@/i18n/navigation';
 export default function LanguageSwitcher({ locale }: { locale: string }) {
   const router = useRouter();
   const pathname = usePathname();
-  const otherLocale = locale === 'en' ? 'fr' : 'en';
 
-  const switchLocale = () => {
-    router.replace(pathname, { locale: otherLocale });
+  const switchTo = (target: string) => {
+    if (target !== locale) {
+      router.replace(pathname, { locale: target });
+    }
   };
 
   return (
-    <button
-      onClick={switchLocale}
-      className="flex h-8 w-8 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground"
-      aria-label={`Switch to ${otherLocale}`}
-    >
-      <span className="font-mono text-[11px] font-medium uppercase tracking-wider">{otherLocale}</span>
-    </button>
+    <div className="flex h-7 items-center rounded-md border border-border bg-muted/50 p-0.5 font-mono text-[11px] font-medium uppercase tracking-wider">
+      {(['fr', 'en'] as const).map((lang) => (
+        <button
+          key={lang}
+          onClick={() => switchTo(lang)}
+          aria-label={`Switch to ${lang}`}
+          className={`rounded px-2 py-1 transition-colors duration-150 ${
+            locale === lang
+              ? 'bg-background text-foreground shadow-sm'
+              : 'text-muted-foreground hover:text-foreground'
+          }`}
+        >
+          {lang}
+        </button>
+      ))}
+    </div>
   );
 }

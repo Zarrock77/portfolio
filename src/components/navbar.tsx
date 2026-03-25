@@ -72,13 +72,13 @@ export default function Navbar() {
             className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
           >
             <span
-              className={`block h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? 'translate-y-[3.5px] rotate-45' : ''}`}
+              className={`block h-px w-5 bg-current transition-all duration-200 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
             />
             <span
               className={`block h-px w-5 bg-current transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
             />
             <span
-              className={`block h-px w-5 bg-current transition-transform duration-200 ${menuOpen ? '-translate-y-[3.5px] -rotate-45' : ''}`}
+              className={`block h-px w-5 bg-current transition-all duration-200 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
             />
           </button>
         </div>
