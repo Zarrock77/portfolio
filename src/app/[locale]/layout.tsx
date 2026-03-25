@@ -83,7 +83,14 @@ export default async function RootLayout({
     notFound();
   }
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const allMessages = await getMessages();
+  // Only pass client-needed namespaces to reduce RSC payload size.
+  // Server Components use getTranslations() directly.
+  const messages = {
+    nav: allMessages.nav,
+    footer: allMessages.footer,
+    contact: { form: (allMessages.contact as Record<string, unknown>).form },
+  };
 
   return (
     <html

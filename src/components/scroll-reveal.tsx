@@ -10,21 +10,29 @@ interface ScrollRevealProps {
 
 export default function ScrollReveal({ children, delay = 0, className = '' }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [revealed, setRevealed] = useState(false);
+  // SSR: 'visible' so content is immediately painted (helps FCP).
+  // After hydration: 'hidden' for below-fold, 'revealed' for in-viewport.
+  const [state, setState] = useState<'visible' | 'hidden' | 'revealed'>('visible');
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setRevealed(true);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const inViewport = el.getBoundingClientRect().top < window.innerHeight;
+
+    if (inViewport) {
+      setState('revealed');
       return;
     }
+
+    setState('hidden');
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setRevealed(true);
+          setState('revealed');
           observer.disconnect();
         }
       },
@@ -35,11 +43,14 @@ export default function ScrollReveal({ children, delay = 0, className = '' }: Sc
     return () => observer.disconnect();
   }, []);
 
+  const stateClass =
+    state === 'hidden' ? 'scroll-reveal-hidden' : state === 'revealed' ? 'scroll-revealed' : '';
+
   return (
     <div
       ref={ref}
-      className={`${revealed ? 'scroll-revealed' : 'scroll-reveal-hidden'} ${className}`}
-      style={revealed && delay > 0 ? { animationDelay: `${delay}ms` } : undefined}
+      className={`${stateClass} ${className}`.trim()}
+      style={state === 'revealed' && delay > 0 ? { animationDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>
