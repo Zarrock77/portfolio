@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ThemeToggle from '@/components/theme/theme-toggle';
 import LanguageSwitcher from '@/components/language-switcher';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export default function Navbar() {
   const t = useTranslations('nav');
@@ -28,11 +29,11 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: '#projects', label: t('projects') },
-    { href: '#about', label: t('about') },
-    { href: '#skills', label: t('skills') },
-    { href: '#experience', label: t('experience') },
-    { href: '#contact', label: t('contact') },
+    { href: '/#projects', label: t('projects') },
+    { href: '/#about', label: t('about') },
+    { href: '/#skills', label: t('skills') },
+    { href: '/#experience', label: t('experience') },
+    { href: '/#contact', label: t('contact') },
   ];
 
   return (
@@ -42,18 +43,18 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6">
-        <a href="#" className="font-mono text-sm font-medium tracking-tight text-foreground">
+        <Link href="/" className="font-mono text-sm font-medium tracking-tight text-foreground">
           JJD
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           <ul className="flex gap-8">
             {links.map(({ href, label }) => (
               <li key={href}>
-                <a href={href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                <Link href={href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -90,13 +91,13 @@ export default function Navbar() {
           <ul className="mx-auto flex max-w-5xl flex-col px-6 py-4">
             {links.map(({ href, label }) => (
               <li key={href}>
-                <a
+                <Link
                   href={href}
                   onClick={() => setMenuOpen(false)}
                   className="block py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
