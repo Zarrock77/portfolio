@@ -1,0 +1,12 @@
+{
+  "order": 6,
+  "title": "Voice Turn Pipeline (UE5 plugin)",
+  "tags": ["Unreal Engine 5", "C++", "WebSocket", "Open Source"],
+  "github": "https://github.com/Zarrock77/NidalheimVoiceTurnPipelinePluginUE5",
+  "en": {
+    "description": "Open-source Unreal Engine 5 plugin: WebSocket voice-turn client component with push-to-talk, low-latency TTS playback and optional 3D voice. Counterpart of the Node.js package."
+  },
+  "fr": {
+    "description": "Plugin Unreal Engine 5 open source : composant client WebSocket de tours de parole avec push-to-talk, lecture TTS à faible latence et voix 3D optionnelle. Pendant du package Node.js."
+  }
+}
