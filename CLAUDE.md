@@ -10,7 +10,7 @@ Portfolio personnel de Jean-Jacques Delegue, étudiant en 5ème année à Epitec
 
 ## Stack
 
-- **Framework**: Next.js 16.2.1 (App Router) — React 19
+- **Framework**: Next.js 16 (App Router) — React 19
 - **Langage**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS v4 (via `@tailwindcss/postcss`)
 - **Fonts**: Geist Sans & Geist Mono (via `next/font/google`)
