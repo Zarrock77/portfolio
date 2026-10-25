@@ -1,0 +1,12 @@
+{
+  "order": 5,
+  "title": "Voice Turn Pipeline (Node.js)",
+  "tags": ["Node.js", "TypeScript", "WebSocket", "npm", "Open Source"],
+  "github": "https://github.com/Zarrock77/NidalheimVoiceTurnPipelineBackendNodejs",
+  "en": {
+    "description": "Open-source MIT npm package orchestrating streaming voice turns for real-time WebSocket agents: speech-to-text, your reply callback, then text-to-speech."
+  },
+  "fr": {
+    "description": "Package npm open source (MIT) qui orchestre des tours de parole vocaux en streaming pour des agents WebSocket temps réel : reconnaissance vocale, votre callback de réponse, puis synthèse vocale."
+  }
+}
