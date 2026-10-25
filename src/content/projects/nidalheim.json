@@ -1,0 +1,12 @@
+{
+  "order": 4,
+  "title": "Nidalheim",
+  "tags": ["Unreal Engine 5", "C++", "Node.js", "TypeScript", "AI"],
+  "github": "https://github.com/Zarrock77/Nidalheim",
+  "en": {
+    "description": "End-of-studies project (EIP): a Nordic action-adventure game on Unreal Engine 5 where a cloud AI generates voiced NPC dialogue in real time. I work on the UE5 client and the backend, and extracted the voice pipeline into open-source MIT packages (npm + UE5 plugin)."
+  },
+  "fr": {
+    "description": "Projet de fin d'études (EIP) : un jeu d'action-aventure nordique sous Unreal Engine 5 où une IA cloud génère des dialogues de PNJ vocalisés en temps réel. Je travaille sur le client UE5 et le backend, et j'ai extrait le pipeline vocal en packages open source MIT (npm + plugin UE5)."
+  }
+}
