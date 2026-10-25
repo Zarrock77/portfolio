@@ -12,7 +12,7 @@
   },
   "hero": {
     "role": "Fullstack Developer",
-    "description": "Building modern web experiences from frontend to backend. 4th year student at Epitech Paris, currently in Brussels.",
+    "description": "Building modern web experiences from frontend to backend. 5th year student at Epitech Paris.",
     "explorePortfolio": "Explore Portfolio",
     "downloadCV": "Download CV"
   },
@@ -22,7 +22,7 @@
   },
   "about": {
     "title": "About",
-    "p1": "I'm a fullstack developer and 4th year student at Epitech Paris, currently completing my international year at Epitech Brussels.",
+    "p1": "I'm a fullstack developer and 5th year student at Epitech Paris, back from an international year at Epitech Brussels.",
     "p2": "From low-level C projects to modern web apps with React and Next.js, I enjoy exploring the full spectrum of development and building clean, efficient applications.",
     "education": "Education",
     "school": "Epitech",
@@ -66,7 +66,7 @@
     "title": "Legal Notice",
     "backHome": "← Back to home",
     "editorTitle": "Website Publisher",
-    "editorContent": "This website is published by Jean-Jacques Delegue, a private individual (non-commercial).\nEmail: jean-jacques.delegue@epitech.eu",
+    "editorContent": "This website is published by Jean-Jacques Delegue, a private individual (non-commercial).\nEmail: contact@jean-jacques-delegue.fr",
     "hostingTitle": "Hosting",
     "hostingContent": "This website is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States. Website: vercel.com",
     "ipTitle": "Intellectual Property",
@@ -74,7 +74,7 @@
     "responsibilityTitle": "Limitation of Liability",
     "responsibilityContent": "Jean-Jacques Delegue cannot be held liable for any direct or indirect damages resulting from the use of this website or its unavailability.",
     "contactTitle": "Contact",
-    "contactContent": "For any questions regarding this website, please contact jean-jacques.delegue@epitech.eu."
+    "contactContent": "For any questions regarding this website, please contact contact@jean-jacques-delegue.fr."
   },
   "privacy": {
     "metaTitle": "Privacy Policy | Jean-Jacques Delegue",
@@ -95,8 +95,8 @@
     "retentionTitle": "Data Retention",
     "retentionContent": "Contact form data is retained only for as long as necessary to process your request, then deleted. Web3Forms applies its own retention rules.",
     "rightsTitle": "Your Rights",
-    "rightsContent": "Under GDPR, you have the right to access, rectify, erase, and port your data, as well as the right to object to its processing. To exercise these rights, contact: jean-jacques.delegue@epitech.eu.",
+    "rightsContent": "Under GDPR, you have the right to access, rectify, erase, and port your data, as well as the right to object to its processing. To exercise these rights, contact: contact@jean-jacques-delegue.fr.",
     "contactTitle": "Contact",
-    "contactContent": "For any questions regarding the processing of your personal data: jean-jacques.delegue@epitech.eu"
+    "contactContent": "For any questions regarding the processing of your personal data: contact@jean-jacques-delegue.fr"
   }
 }

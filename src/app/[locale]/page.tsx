@@ -23,7 +23,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     jobTitle: t('hero.role'),
     description: t('metadata.description'),
     sameAs: ['https://github.com/Zarrock77', 'https://www.linkedin.com/in/jean-jacques-delegue/'],
-    email: 'jean-jacques.delegue@epitech.eu',
+    email: 'contact@jean-jacques-delegue.fr',
     alumniOf: {
       '@type': 'EducationalOrganization',
       name: 'Epitech',
@@ -99,7 +99,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               </svg>
             </a>
             <a
-              href="mailto:jean-jacques.delegue@epitech.eu"
+              href="mailto:contact@jean-jacques-delegue.fr"
               className="group flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Email

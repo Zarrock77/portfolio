@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Portfolio personnel de Jean-Jacques Delegue, étudiant en 4ème année à Epitech Paris (actuellement à Epitech Bruxelles). Développeur fullstack en formation.
+Portfolio personnel de Jean-Jacques Delegue, étudiant en 5ème année à Epitech Paris (année internationale à Bruxelles terminée). Développeur fullstack en formation.
 
 ## Stack
 
