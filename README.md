@@ -48,5 +48,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## License
 
-All rights reserved, see [LICENSE](LICENSE). The code is published for reference only.
-Third-party dependencies keep their own permissive licenses (MIT, Apache-2.0, ISC, BSD, 0BSD; CC-BY-4.0 for browser data packages).
+The source code is released under the [MIT License](LICENSE): anyone is free to reuse or fork it.
+My personal content (CV, texts in `messages/`, data in `src/content/`) stays all rights reserved.
+Contributions are reserved to the repository owner; `main` is changed through pull requests only.
