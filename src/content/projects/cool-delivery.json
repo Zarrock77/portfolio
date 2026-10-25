@@ -1,0 +1,12 @@
+{
+  "order": 3,
+  "title": "Cool Delivery 2.0",
+  "tags": ["AWS", "Terraform", "Cloud Security", "IAM", "GDPR"],
+  "github": "https://github.com/Zarrock77/cool-delivery-2.0",
+  "en": {
+    "description": "Full rebuild of an insecure legacy AWS infrastructure into a production-grade, GDPR-compliant architecture, entirely coded in Terraform: isolated VPCs, least-privilege IAM, KMS encryption, encrypted RDS, and CloudTrail/CloudWatch monitoring."
+  },
+  "fr": {
+    "description": "Reconstruction complète d'une infrastructure AWS héritée et non sécurisée en une architecture production-grade et conforme au RGPD, entièrement codée en Terraform : VPC isolés, IAM least-privilege, chiffrement KMS, RDS chiffré et supervision CloudTrail/CloudWatch."
+  }
+}

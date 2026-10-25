@@ -67,7 +67,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:jean-jacques.delegue@epitech.eu" className="transition-colors hover:text-foreground">
+              <a href="mailto:contact@jean-jacques-delegue.fr" className="transition-colors hover:text-foreground">
                 Email
               </a>
             </li>
